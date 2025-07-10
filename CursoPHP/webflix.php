@@ -1,7 +1,9 @@
 <?php
 
-echo "Ola, mundo! Teste web";
+echo "Ola, mundo! Teste web<br>";
 
-$nameFilm = "Top Gun maverick"
-$anoLancamento = 2022;
-$incluidoNoPlano = True;
+$nameFilm = "Top Gun Maverick";
+$ano = 2022;
+$incluidoNoPlano = true;
+
+echo $nameFilm;
