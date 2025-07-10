@@ -1,0 +1,8 @@
+* A diferença entre aspas duplas (") e aspas simples (') é que as variáveis serão 
+interpretadas mas os operadores não. Os operadores dentro de uma string se 
+tornam um caractere como qualquer outro.
+
+
+// String aqui armazena textos, posso fazer operações tbm
+// o sinal de ponto significa Concatenação "."
+// estando dentro de aspas duplas posso trabalhar com interpolação
