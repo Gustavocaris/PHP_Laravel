@@ -32,15 +32,52 @@ Com essas funcionalidades, o programa se torna um sistema básico de controle de
 $saldoAtual = 5000;
 $titularConta = 'Gustavo Caris';
 
-
+// Menu inicial
 echo "***************************\n";
 echo "Titular: $titularConta\n";
 echo "Saldo Atual: R$ $saldoAtual\n";
 echo "***************************\n";
 
+// nossas opçõeszinhas
 echo "Opção 01: Consultar saldo atual\n";
 echo "Opção 02: Sacar valor\n";
 echo "Opção 03: Depositar valor\n";
 echo "Opção 04: Sair\n";
 
+// Isso qui é pra capturar o input do usuario F.file GET.pegar S.string que seria nossa variavel
+$opcao = (int) fgets (STDIN);
+
+switch ($opcao) {
+    case 1:
+        echo "***************************\n";
+        echo "Titular: $titularConta\n";
+        echo "Saldo Atual: R$ $saldoAtual\n";
+        echo "***************************\n";
+        break;
+    case 2:
+        echo "Qual valor deseja sacar?\n";
+        $valorSaque = (float) fgets (STDIN);
+        if ($valorSaque <= $saldoAtual) {
+            echo "Saque realizado com sucesso!\n";
+            $saldoAtual = $saldoAtual - $valorSaque;
+        } else {
+            echo "Saldo insuficiente!\n";
+        }
+        break;
+    case 3:
+        echo "Qual valor deseja depositar?\n";
+        $valorDeposito = (float) fgets (STDIN);
+        $saldoAtual = $saldoAtual + $valorDeposito;
+        echo "Depósito realizado com sucesso!\n";
+        break;
+    case 4:
+        echo "Até logo futuro milionario...\n";
+        break;
+    default:
+        echo "Opção inválida!\n";
+        break;
+}
+
+
+        
 
