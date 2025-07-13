@@ -1,20 +1,21 @@
 <?php
 
-$nameFilm = "Homem Aranha";
-$nameFilm = "Gatito de botas";
-$nameFilm = "Xerequ";
+echo "Bem-vindo(a) ao App Filmes!\n";
 
+$nomeFilme = "Top Gun - Maverick";
 
-// 1. Exibindo mensagens com o echo
-echo "Bem-vindo ao mundo PHP!";
-echo "Este é um exemplo com funcionalidades básicas.<br><br>";
+$anoLancamento = 2022;
 
-// 2. Declaração de variáveis
-// Em PHP, todas as variáveis começam com o símbolo "$" -> tipos de variaveis :
+$quantidadeDeNotas = $argc - 1;
+$notas = [];
 
-$nome = "Gustavo";          // String (texto)
-$idade = 25;                // Integer (número inteiro)
-$peso = 81.5;               // Float (número com casa decimal)
-$trabalha = true;  
+for ($contador = 1; $contador < $argc; $contador++) {
+    $notas[] = (float) $argv[$contador];
+}
+
+$notaFilme = array_sum($notas) / $quantidadeDeNotas;
+$planoPrime = true;
+
+$incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
 
 ?>
