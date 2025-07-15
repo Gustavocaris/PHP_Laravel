@@ -43,7 +43,13 @@ for ($contador = 1; $contador < $argc; $contador++) {
     $notas[] = (float) $argv[$contador];
 }
 
-$notaFilme = array_sum($notas) / $quantidadeDeNotas;
+if ($quantidadeDeNotas > 0) {
+    $notaFilme = array_sum($notas) / $quantidadeDeNotas;
+} else {
+    $notaFilme = 0; // ou algum valor padrão
+}
+
+//$notaFilme = array_sum($notas) / $quantidadeDeNotas;
 $planoPrime = true;
 
 $incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
