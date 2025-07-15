@@ -80,3 +80,23 @@ $filme = [
 
 
 echo $filme["ano"];
+
+/*
+A função var_dump() em PHP é utilizada para exibir informações sobre uma variável de forma detalhada. 
+Ela fornece o tipo da variável, o tamanho (no caso de strings e arrays) e o conteúdo da variável.
+
+-> var_dump() é utilizado para:
+Verificar o tipo de dados/ Exibir o conteúdo/ Depuração
+*/
+
+var_dump($notas);
+sort($notas);
+var_dump($notas);
+$menorNota = min($notas);
+var_dump($menorNota);
+
+var_dump($filme['nome']);
+$posicaoDoisPontos = strpos($filme['nome'], ':');
+var_dump($posicaoDoisPontos);
+
+var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
