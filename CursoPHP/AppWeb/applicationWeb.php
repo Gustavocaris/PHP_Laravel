@@ -1,6 +1,13 @@
 <?php
 
-require "functions.php";
+
+/*
+ chamamos de uma constante mágica. Com ela, podemos recuperar o diretório do arquivo. Se usada dentro de um include ou require, 
+ o diretório do arquivo incluído será retornado.
+*/
+
+// caminho relativo
+require __DIR__ . "/functions.php";
 
 echo "Bem-vindo(a) ao screen match!\n";
 
