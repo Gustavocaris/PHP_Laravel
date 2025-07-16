@@ -69,13 +69,24 @@ Verificar o tipo de dados/ Exibir o conteúdo/ Depuração
 */
 
 var_dump($notas);
-sort($notas);
-var_dump($notas);
-$menorNota = min($notas);
-var_dump($menorNota);
+
+if (!empty($notas)) {
+    sort($notas);
+    var_dump($notas);
+
+    $menorNota = min($notas);
+    var_dump($menorNota);
+} else {
+    echo "Nenhuma nota foi informada.\n";
+}
+
 
 var_dump($filme['nome']);
 $posicaoDoisPontos = strpos($filme['nome'], ':');
 var_dump($posicaoDoisPontos);
 
 var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
+
+//colocando uma funcao dentro de um arquivo
+$filmeComoStringJson = json_encode($filme);
+file_put_contents(__DIR__ . '/filme.json', $filmeComoStringJson);
