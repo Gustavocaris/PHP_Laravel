@@ -7,7 +7,7 @@
 */
 
 // caminho relativo
-require __DIR__ . "/functions.php";
+require __DIR__ . "/src/functions.php";
 
 echo "Bem-vindo(a) ao screen match!\n";
 
@@ -50,12 +50,12 @@ $genero = match ($nomeFilme) {
 
 echo "O gênero do filme é: $genero\n";
 
-$filme = [
-    "nome" => "Thor: Ragnarok",
-    "ano" => 2021,
-    "nota" => 7.8,
-    "genero" => "super-herói",
-];
+$filme = criaFilme(
+    nota: 7.8,
+    genero: "super-herói",
+    anoLancamento: 2021,
+    nome: "Thor: Ragnarok",
+);
 
 
 echo $filme["ano"];
