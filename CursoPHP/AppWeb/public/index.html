@@ -1,39 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro | ScreenMatch</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #00bcd4;
+        }
+
+        form {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #cccccc;
+        }
+
+        input[type="text"],
+        input[type="year"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background-color: #2a2a2a;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0198a3;
+        }
+
+        select option {
+            background-color: #2a2a2a;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-<h1>Exportador do ScreenMatch</h1>
-<form action="exporta-arquivo.php" method="post">
-    <fieldset>
-        <label for="nome">Nome:</label> <br>
-        <input type="text" name="nome" id="nome" required>
-    </fieldset>
+    <h1>Exportador AppWeb Filmes</h1>
+    <form action="exporta-arquivo.php" method="post">
+        <fieldset>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+        </fieldset>
 
-    <fieldset>
-        <label for="ano">Ano de lançamento:</label> <br>
-        <input type="year" name="ano" id="ano" required>
-    </fieldset>
+        <fieldset>
+            <label for="ano">Ano de lançamento:</label>
+            <input type="year" name="ano" id="ano" required>
+        </fieldset>
 
-    <fieldset>
-        <label for="nome">Nota:</label> <br>
-        <input type="number" name="nota" id="nota" required step="0.1">
-    </fieldset>
+        <fieldset>
+            <label for="nota">Nota:</label>
+            <input type="number" name="nota" id="nota" required step="0.1">
+        </fieldset>
 
-    <fieldset>
-        <label for="nome">Gênero:</label> <br>
-        <select name="genero" id="genero">
-            <option value="super-heroi">Super-herói</option>
-            <option value="comedia">Comédia</option>
-            <option value="acao">Ação</option>
-        </select>
-    </fieldset>
+        <fieldset>
+            <label for="genero">Gênero:</label>
+            <select name="genero" id="genero">
+                <option value="super-heroi">Super-herói</option>
+                <option value="comedia">Comédia</option>
+                <option value="acao">Ação</option>
+            </select>
+        </fieldset>
 
-    <br>
-    <input type="submit" value="Enviar">
-</form>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
