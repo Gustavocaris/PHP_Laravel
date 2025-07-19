@@ -1,1 +1,12 @@
-"Testando integra��o com o GitHub" 
+"Testando integra��o com o GitHub" 
+
+ler arquivos através da função file_get_contents e a escrever em arquivos através da função file_put_contents, mas é possível fazer 
+muito mais com um arquivo. Confira alguns exemplos:
+
+Ler somente uma linha usando a função fgets.
+Ler um número determinado de bytes do arquivo através de fread.
+Escrever em um arquivo usando fwrite.
+Navegar no arquivo para uma posição específica com fseek.
+Todas essas funções possuem como parâmetro uma variável do tipo resource, que nesse caso é uma espécie de ponteiro para o arquivo. 
+Para termos esse ponteiro, utilizamos a função fopen que abre um arquivo para leitura, escrita ou ambos, d
+ependendo dos modos de abertura que informarmos por parâmetro.
