@@ -58,7 +58,7 @@ $filme = criaFilme(
 );
 
 
-echo $filme["ano"];
+echo $filme->anoLancamento;
 
 /*
 A função var_dump() em PHP é utilizada para exibir informações sobre uma variável de forma detalhada. 
@@ -81,11 +81,11 @@ if (!empty($notas)) {
 }
 
 
-var_dump($filme['nome']);
-$posicaoDoisPontos = strpos($filme['nome'], ':');
+var_dump($filme->nome);
+$posicaoDoisPontos = strpos($filme->nome, ':');
 var_dump($posicaoDoisPontos);
 
-var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
+var_dump(substr($filme->nome, 0, $posicaoDoisPontos));
 
 //colocando uma funcao dentro de um arquivo
 $filmeComoStringJson = json_encode($filme);
