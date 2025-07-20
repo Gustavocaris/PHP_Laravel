@@ -7,6 +7,7 @@
 */
 
 // caminho relativo
+require __DIR__ . "/src/Model/Filme.php";
 require __DIR__ . "/src/functions.php";
 
 echo "Bem-vindo(a) ao screen match!\n";
