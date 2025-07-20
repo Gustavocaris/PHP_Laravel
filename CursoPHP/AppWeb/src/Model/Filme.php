@@ -8,13 +8,14 @@ class Filme {
     public array $notas = [];
 
     function avalia(float $nota){
-        $notas[] = $nota;
+        // this é pra chamar o objeto pra dentro da minha funcao
+        $this->notas[] = $nota;
     }
     function media(): float {
-        $somaNotas = array_sum($notas);
-        $quantidadeNotas = count($notas);
+        $somaNotas = array_sum($this->notas);
+        $quantidadeNotas = count($this->notas);
 
-        return $somaNotas / count($notas);
+        return $somaNotas / count($this->notas);
     }
 }
 
