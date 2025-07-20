@@ -30,12 +30,18 @@ function incluidoNoPlano(bool $planoPrime,int $anoLancamento): bool {
 }
 
 
-function criaFilme(string $nome, int $anoLancamento, float $nota, string $genero): array
+function criaFilme(string $nome, int $anoLancamento, float $nota, string $genero): Filme
 {
-    return [
-        'nome' => $nome,
-        'ano' => $anoLancamento,
-        'nota' => $nota,
-        'genero' => $genero
-    ];
+    $filme = new Filme();
+
+    // definindo os valores pro que é meu filme... que eu tinha passado lá em Filme.php
+    $filme->nome = $nome;
+    $filme->anoLancamento = $anoLancamento;
+    $filme->nota = $nota;
+    $filme->genero = $genero;
+
+    return $filme;
+
+
+    
 }
