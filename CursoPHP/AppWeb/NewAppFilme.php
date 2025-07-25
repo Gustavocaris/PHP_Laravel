@@ -4,8 +4,11 @@ require __DIR__ . "/src/Model/Filme.php";
 
 echo "Bem Vindo a nossa aplicação Webfilme\n";
 
-$filme = new Filme();
-$filme->defineAnoLancamento(2021);
+$filme = new Filme(
+    'Thor ragnarok',
+    '2021',
+    'Super-heroi'
+);
 
 /*
 $filme->nome = 'Thor ragnarok';

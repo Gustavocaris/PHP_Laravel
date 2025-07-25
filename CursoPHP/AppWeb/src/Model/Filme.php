@@ -2,19 +2,14 @@
 
 // sempre que eu criar um novo filme, meu array de notas vai ser vazio
 class Filme {
-    private string $nome = "Nome padrão";
-    private int $anoLancamento = 2023;
-    private string $genero = "Ação";
     private array $notas = [];
 
     public function __construct (
-        string $nome,
-        int $anoLancamento,
-        string $genero,
+        private string $nome,
+        private int $anoLancamento,
+        private string $genero,
     ) {
-        $this->nome = $nome;
-        $this->anoLancamento = $anoLancamento;
-        $this->genero = $genero;
+        $this->notas = [];
     }
 
     function avalia(float $nota){
@@ -30,8 +25,13 @@ class Filme {
     public function anoLancamento(): int {
         return $this->anoLancamento;
     }
-    public function defineAnoLancamento(int $anoLancamento): void {
-        $this->anoLancamento = $anoLancamento;
+
+    public function nome(): string {
+        return $this->nome;
     }
+    public function genero(): string {
+        return $this->genero;
+    }
+
 }
 
