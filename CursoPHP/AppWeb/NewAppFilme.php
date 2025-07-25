@@ -9,6 +9,7 @@ $filme = new Filme(
     'Thor ragnarok',
     '2021',
     Genero::SuperHeroi,
+    180,
 );
 
 /*
