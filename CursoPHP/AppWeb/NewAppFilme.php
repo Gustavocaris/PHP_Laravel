@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . "/src/Model/Genero.php";
 require __DIR__ . "/src/Model/Filme.php";
 
 echo "Bem Vindo a nossa aplicação Webfilme\n";
@@ -7,7 +8,7 @@ echo "Bem Vindo a nossa aplicação Webfilme\n";
 $filme = new Filme(
     'Thor ragnarok',
     '2021',
-    'Super-heroi'
+    Genero::SuperHeroi,
 );
 
 /*
