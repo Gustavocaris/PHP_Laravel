@@ -1,7 +1,11 @@
 <?php
 
+
 require __DIR__ . "/src/Model/Genero.php";
+require __DIR__ . "/src/Model/Titulo.php";
+require __DIR__ . "/src/Model/Serie.php";
 require __DIR__ . "/src/Model/Filme.php";
+
 
 echo "Bem Vindo a nossa aplicação Webfilme\n";
 
@@ -30,5 +34,12 @@ echo $filme->media() . ".\n";
 
 echo $filme->anoLancamento . ".\n";
 
+$serie = new Serie('Lost', 2007, Genero::Drama, 10, 20, 30);
+
+echo $serie->anoLancamento . "\n";
+
+$serie->avalia(8);
+
+echo $serie->media() . "\n";
 
 ?>

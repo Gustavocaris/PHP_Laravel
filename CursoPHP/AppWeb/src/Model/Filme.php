@@ -2,9 +2,19 @@
 
 // a classe filme herda as caracteristocas do Titulo
 class Filme extends Titulo {
+
     public function __construct (
-        public readonly int $duracaoEmMinutos,
+        string $nome,
+        int $anoLancamento,
+        Genero $genero,
+        int $duracaoEmMinutos
     ) {
+        parent::__construct(
+            $nome,
+            $anoLancamento,
+            $genero,
+            $duracaoEmMinutos
+        );
     }
 
 }
