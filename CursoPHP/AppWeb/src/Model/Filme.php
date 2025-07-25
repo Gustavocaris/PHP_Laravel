@@ -7,6 +7,16 @@ class Filme {
     private string $genero = "Ação";
     private array $notas = [];
 
+    public function __construct (
+        string $nome,
+        int $anoLancamento,
+        string $genero,
+    ) {
+        $this->nome = $nome;
+        $this->anoLancamento = $anoLancamento;
+        $this->genero = $genero;
+    }
+
     function avalia(float $nota){
         // this é pra chamar o objeto pra dentro da minha funcao
         $this->notas[] = $nota;
