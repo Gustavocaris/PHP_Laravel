@@ -1,6 +1,6 @@
 <?php
 
-class Titulo {
+abstract class Titulo {
     
     private array $notas = [];
 
@@ -25,8 +25,6 @@ class Titulo {
     }
 
     // código omitido
-    public function duracaoEmMinutos(): int
-    {
-        return 0;
-    }
+    abstract public function duracaoEmMinutos(): int;
+    
 }
