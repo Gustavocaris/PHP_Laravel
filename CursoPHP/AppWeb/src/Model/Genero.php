@@ -4,6 +4,7 @@
 // Usaremos um padrão de nomenclatura similar ao das classes: a primeira letra de cada palavra em maiúscula.
 enum Genero {
     case Acao;
+    case Drama;
     case Comedia;
     case Terror;
     case SuperHeroi;

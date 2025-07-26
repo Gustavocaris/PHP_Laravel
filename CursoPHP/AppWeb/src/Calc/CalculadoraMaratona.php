@@ -1,5 +1,7 @@
 <?php
 
+
+
 class CalculadoraDeMaratona {
 
     private int $duracaoMaratona = 0;
@@ -9,10 +11,10 @@ class CalculadoraDeMaratona {
         $this->duracaoMaratona += $titulo->duracaoEmMinutos();
     } 
 
-    public function duracaoMaratona(): int
+    public function duracao(): int
     {
         return $this->duracaoMaratona;
     }
-  
-
 }
+
+

@@ -5,6 +5,8 @@ require __DIR__ . "/src/Model/Genero.php";
 require __DIR__ . "/src/Model/Titulo.php";
 require __DIR__ . "/src/Model/Serie.php";
 require __DIR__ . "/src/Model/Filme.php";
+require __DIR__ . "/src/calc/CalculadoraMaratona.php";
+
 
 
 echo "Bem Vindo a nossa aplicação Webfilme\n";
@@ -41,5 +43,16 @@ echo $serie->anoLancamento . "\n";
 $serie->avalia(8);
 
 echo $serie->media() . "\n";
+
+$calculadora = new CalculadoraDeMaratona();
+$calculadora->inclui($filme);
+$calculadora->inclui($serie);
+$duracao = $calculadora->duracao();
+
+echo "Para essa maratona, você precisa de $duracao minutos";
+
+
+
+
 
 ?>
