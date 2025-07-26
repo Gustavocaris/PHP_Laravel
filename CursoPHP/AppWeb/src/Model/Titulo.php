@@ -23,4 +23,10 @@ class Titulo {
 
         return $somaNotas / count($this->notas);
     }
+
+    // código omitido
+    public function duracaoEmMinutos(): int
+    {
+        return 0;
+    }
 }

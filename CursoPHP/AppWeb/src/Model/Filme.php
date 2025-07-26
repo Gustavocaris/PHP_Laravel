@@ -17,5 +17,10 @@ class Filme extends Titulo {
         );
     }
 
+    public function duracaoEmMinutos(): int
+    {
+        return $this->duracaoEmMinutos;
+    }
+
 }
 

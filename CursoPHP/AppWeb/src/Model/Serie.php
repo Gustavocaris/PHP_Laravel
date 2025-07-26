@@ -17,4 +17,11 @@ class Serie extends Titulo {
             $duracaoEmMinutos
         );       
     }
+
+    // código omitido
+
+    public function duracaoEmMinutos(): int
+    {
+        return $this->temporadas * $this->episodiosPorTemporada * $this->minutosPorEpisodio;
+    }  
 }
