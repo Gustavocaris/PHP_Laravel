@@ -11,7 +11,16 @@ require __DIR__ . "/src/calc/CalculadoraMaratona.php";
 require __DIR__ . "/src/model/Episodio.php";
 require __DIR__ . "/src/Calc/ConversorStars.php";
 
+/*
+Aqui eu poderia usar o NAMESSPACE, pra nmão dazer esse tanto de REQUIRE, mas eu deixei assim por enquato.
+namespace>
+Nós separamos arquivos em pastas e, no que se refere aos símbolos do PHP, podemos dividi-los em pastas lógicas. 
+Elas são divisões lógicas que não exigem que movamos um arquivo de um lugar para outro.
 
+Essa funcionalidade de separação lógica é chamada de Namespace. 
+Um Namespace é, basicamente, uma forma de dizer que uma classe específica faz parte de um pacote, de uma pasta virtual, de um grupo de outras classes. 
+Por exemplo, a classe Titulo faz parte de um grupo chamado "Modelo".
+*/
 
 
 
