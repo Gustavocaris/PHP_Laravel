@@ -1,12 +1,15 @@
 <?php
 
 
+require __DIR__ . "/src/Model/Avaliavel.php";
 require __DIR__ . "/src/Model/Genero.php";
 require __DIR__ . "/src/Model/Titulo.php";
 require __DIR__ . "/src/Model/Serie.php";
 require __DIR__ . "/src/Model/Filme.php";
 require __DIR__ . "/src/calc/CalculadoraMaratona.php";
 require __DIR__ . "/src/model/Episodio.php";
+require __DIR__ . "/src/Calc/ConversorStars.php";
+
 
 
 
@@ -54,7 +57,8 @@ $duracao = $calculadora->duracao();
 
 echo "Para essa maratona, você precisa de $duracao minutos";
 
-
+$conversor = new ConversorNotaEstrela();
+echo $conversor->converte($serie);
 
 
 

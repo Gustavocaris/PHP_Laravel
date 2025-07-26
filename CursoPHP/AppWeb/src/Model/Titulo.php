@@ -1,6 +1,6 @@
 <?php
 
-abstract class Titulo {
+abstract class Titulo implements Avaliavel {
     
     private array $notas = [];
 
@@ -10,10 +10,10 @@ abstract class Titulo {
         public readonly Genero $genero,
         public readonly int $duracaoEmMinutos,
     ) {
-        $this->notas = [];
+        //$this->notas = [];
     }
 
-    function avalia(float $nota){
+    function avalia(float $nota): void {
         // this é pra chamar o objeto pra dentro da minha funcao
         $this->notas[] = $nota;
     }
